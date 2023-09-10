@@ -1,5 +1,4 @@
-const { redmondcrawler, seattlecrawler } = require('./scrapers/crawlers')
-const { bellevuecrawler } = require('./scrapers/crawlers')
+const { redmondcrawler, seattlecrawler, bellevuecrawler } = require('./scrapers/crawlers')
 redmondcrawler()
 bellevuecrawler()
 seattlecrawler()

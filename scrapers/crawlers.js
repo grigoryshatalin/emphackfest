@@ -19,7 +19,9 @@ axios.get(websiteurl)
     const heading = document.querySelector(parentlocation).querySelectorAll(childlocation)
     // console.log(heading[0].innerHTML)
     for(let i=0; i<heading.length; i++){
-        console.log(heading[i].innerHTML.replace(/&\w+;/g, ''));
+        let data = heading[i].innerHTML.replace(/&\w+;/g, '')
+        console.log(data);
+        localStorage.setItem("98052"+i, "https://www.redmond.gov/265/Old-Fire-House-Teen-Center "+data)
     }
   })
   .catch((error) => {
@@ -45,7 +47,9 @@ function bellevuecrawler(){
       const heading = document.querySelectorAll(parentlocation)[9].querySelectorAll(childlocation)
       // console.log(heading[0].innerHTML)
       for(let i=0; i<heading.length; i++){
-          console.log(heading[i].innerHTML.replace(/&\w+;/g, ''));
+        let data = heading[i].innerHTML.replace(/&\w+;/g, '')
+        console.log(data);
+        localStorage.setItem("98004"+i, "https://bellevuewa.gov/volunteering/teen "+data)
       }
     })
     .catch((error) => {
@@ -73,6 +77,7 @@ function bellevuecrawler(){
           const extractedData = extractTextFromHTML(heading);
           console.log('Title: ' + extractedData.title);
           console.log('Excerpt: ' + extractedData.excerpt);
+          localStorage.setItem("98103"+i, "https://www.seattle.gov/youth-programs "+extractedData.title+" "+extractedData.excerpt)
         });
       })
       .catch((error) => {

@@ -1,15 +1,40 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-
-import { Helmet } from 'react-helmet'
-
-import './actual-stuff1.css'
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+import './actual-stuff1.css';
 
 const ActualStuff1 = (props) => {
+  // Define the zipCode here or fetch it from localStorage
+  const zipCode = localStorage.getItem("zipCode");
+
+  useEffect(() => {
+    // Define the data based on zip code and box numbers 0 to 3
+    for (let boxNumber = 0; boxNumber < 4; boxNumber++) {
+      let stuffKey = zipCode + boxNumber;
+      let stuffData = localStorage.getItem(stuffKey);
+  
+      // Get the HTML elements you want to update
+      const container = document.querySelector(`.actual-stuff1-container0${boxNumber + 1}`);
+      const link = container.querySelector(`.actual-stuff1-link`);
+      const description = container.querySelector(`.actual-stuff1-text0${boxNumber + 1}`);
+  
+      // Update the HTML content
+      if (stuffData) {
+        const stuffParts = stuffData.split(" ");
+        if (stuffParts.length >= 3) {
+          link.href = stuffParts[0];
+          link.textContent = stuffParts[1];
+          description.textContent = stuffParts[2];
+        }
+      }
+    }
+  }, [zipCode]);
+  
+  // useEffect(localStorage.getItem("zipCode"))
   return (
     <div className="actual-stuff1-container">
       <Helmet>
-        <title>ActualStuff1 - Copy of Togthr template</title>
+        <title>ActualStuffy1 - Copy of Togthr template</title>
         <meta
           property="og:title"
           content="ActualStuff1 - Copy of Togthr template"
@@ -25,17 +50,16 @@ const ActualStuff1 = (props) => {
         <div className="actual-stuff1-container01">
           <input
             type="text"
-            placeholder="98052"
+            id = "zipInput" 
+            placeholder={localStorage.getItem("zipCode")}
             className="actual-stuff1-textinput input"
           />
         </div>
         <span className="actual-stuff1-text02">Sort by:</span>
-        <select className="actual-stuff1-select">
-          <option value="Nearest" selected>
-            Nearest
-          </option>
-          <option value="Alphabetical">Alphabetical</option>
-        </select>
+        <select className="actual-stuff1-select" defaultValue="Nearest">
+  <option value="Nearest">Nearest</option>
+  <option value="Alphabetical">Alphabetical</option>
+</select>
       </div>
       <div className="actual-stuff1-container02">
         <div className="actual-stuff1-container03">
@@ -143,5 +167,4 @@ const ActualStuff1 = (props) => {
     </div>
   )
 }
-
 export default ActualStuff1
