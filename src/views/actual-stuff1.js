@@ -30,7 +30,7 @@ const ActualStuff1 = (props) => {
     }
   }, [zipCode]);
   
-  // useEffect(localStorage.getItem("zipCode"))
+  useEffect(localStorage.getItem("zipCode"))
   return (
     <div className="actual-stuff1-container">
       <Helmet>
