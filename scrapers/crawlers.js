@@ -21,7 +21,7 @@ axios.get(websiteurl)
     for(let i=0; i<heading.length; i++){
         let data = heading[i].innerHTML.replace(/&\w+;/g, '')
         console.log(data);
-        localStorage.setItem("98052"+i, "https://www.redmond.gov/265/Old-Fire-House-Teen-Center "+data)
+        // localStorage.setItem("98052"+i, "https://www.redmond.gov/265/Old-Fire-House-Teen-Center "+data)
     }
   })
   .catch((error) => {
@@ -49,7 +49,7 @@ function bellevuecrawler(){
       for(let i=0; i<heading.length; i++){
         let data = heading[i].innerHTML.replace(/&\w+;/g, '')
         console.log(data);
-        localStorage.setItem("98004"+i, "https://bellevuewa.gov/volunteering/teen "+data)
+        // localStorage.setItem("98004"+i, "https://bellevuewa.gov/volunteering/teen "+data)
       }
     })
     .catch((error) => {
@@ -77,7 +77,7 @@ function bellevuecrawler(){
           const extractedData = extractTextFromHTML(heading);
           console.log('Title: ' + extractedData.title);
           console.log('Excerpt: ' + extractedData.excerpt);
-          localStorage.setItem("98103"+i, "https://www.seattle.gov/youth-programs "+extractedData.title+" "+extractedData.excerpt)
+          // localStorage.setItem("98103"+i, "https://www.seattle.gov/youth-programs "+extractedData.title+" "+extractedData.excerpt)
         });
       })
       .catch((error) => {

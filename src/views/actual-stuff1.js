@@ -30,7 +30,7 @@ const ActualStuff1 = (props) => {
     }
   }, [zipCode]);
   
-  useEffect(localStorage.getItem("zipCode"))
+  // useEffect(localStorage.getItem("zipCode"))
   return (
     <div className="actual-stuff1-container">
       <Helmet>
@@ -69,22 +69,20 @@ const ActualStuff1 = (props) => {
             </div>
           </div>
           <a
-            href="https://example.com"
+            href="https://www.seattle.gov/youth-programs"
             target="_blank"
             rel="noreferrer noopener"
             className="actual-stuff1-link"
           >
-            Title of Opportunity
+            Learning Buddies (14-18)
           </a>
         </div>
         <div className="actual-stuff1-description">
           <span className="actual-stuff1-text04">
-            Example text meant to be replaced by a short description. I am
-            typing random words, these words will be replaced hopefully. If they
-            don&apos;t I will be very sad during the presentation.
+            Mentor an elementary school student at a library.
           </span>
         </div>
-        <span className="actual-stuff1-text05">ZIP</span>
+        <span className="actual-stuff1-text05">98103</span>
       </div>
       <div className="actual-stuff1-container06">
         <div className="actual-stuff1-container07">
@@ -94,22 +92,20 @@ const ActualStuff1 = (props) => {
             </div>
           </div>
           <a
-            href="https://example.com"
+            href="https://www.seattle.gov/youth-programs"
             target="_blank"
             rel="noreferrer noopener"
             className="actual-stuff1-link1"
           >
-            Title of Opportunity
+            Teen Service Learning at the Library
           </a>
         </div>
         <div className="actual-stuff1-description1">
           <span className="actual-stuff1-text07">
-            Example text meant to be replaced by a short description. I am
-            typing random words, these words will be replaced hopefully. If they
-            don&apos;t I will be very sad during the presentation.
+            Volunteer at a Library.
           </span>
         </div>
-        <span className="actual-stuff1-text08">ZIP</span>
+        <span className="actual-stuff1-text08">98103</span>
       </div>
       <div className="actual-stuff1-container10">
         <div className="actual-stuff1-container11">
@@ -119,22 +115,20 @@ const ActualStuff1 = (props) => {
             </div>
           </div>
           <a
-            href="https://example.com"
+            href="https://www.seattle.gov/youth-programs"
             target="_blank"
             rel="noreferrer noopener"
             className="actual-stuff1-link2"
           >
-            Title of Opportunity
+            Youth Transportation Ambassadors.
           </a>
         </div>
         <div className="actual-stuff1-description2">
           <span className="actual-stuff1-text10">
-            Example text meant to be replaced by a short description. I am
-            typing random words, these words will be replaced hopefully. If they
-            don&apos;t I will be very sad during the presentation.
+            Lead conversations about transportation with creative projects.
           </span>
         </div>
-        <span className="actual-stuff1-text11">ZIP</span>
+        <span className="actual-stuff1-text11">98103</span>
       </div>
       <div className="actual-stuff1-container14">
         <div className="actual-stuff1-container15">
@@ -144,22 +138,20 @@ const ActualStuff1 = (props) => {
             </div>
           </div>
           <a
-            href="https://example.com"
+            href="https://www.seattle.gov/youth-programs"
             target="_blank"
             rel="noreferrer noopener"
             className="actual-stuff1-link3"
           >
-            Title of Opportunity
+            Parks and Recreation Volunteering
           </a>
         </div>
         <div className="actual-stuff1-description3">
           <span className="actual-stuff1-text13">
-            Example text meant to be replaced by a short description. I am
-            typing random words, these words will be replaced hopefully. If they
-            don&apos;t I will be very sad during the presentation.
+            Find ways to give back like trail building.
           </span>
         </div>
-        <span className="actual-stuff1-text14">ZIP</span>
+        <span className="actual-stuff1-text14">98103</span>
       </div>
       <Link to="/seeall" className="actual-stuff1-navlink button">
         See all
